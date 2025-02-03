@@ -29,3 +29,19 @@ fn fibonacci(n: u64) -> u64 {
     a // After n iterations, a holds the nth Fibonacci number
 }
 ```
+
+### Recursive Approach:
+
+The recursive approach calculates Fibonacci numbers by calling the function for n-1 and n-2 and adding them. This method can be inefficient for large values of n due to repeated calculations.
+
+```rust
+pub fn fibonacci(n: u64) -> u64 {
+    if n == 0 {
+        return 0;
+    } else if n == 1 {
+        return 1;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+```
